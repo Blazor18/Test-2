@@ -1,0 +1,52 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+void printArray(int [],int);			//Prototype
+void addToArrayContents(int [],int);    	//Prototype
+int arrayContainsValue(int [],int);		//Prototype
+
+int main(){
+	int myDataList[] = {12, 223, 232, 434, 1433, 0, -34, 14, 43, 544, 223};
+	int length = 11;
+	int add = 10;
+	int search = 1;
+  int returnvalue = 1;
+ cout << "Enter the value you are searching for" << endl;
+ cin >> search;
+
+	printArray(myDataList,length);	 	// function calls
+	//addToArrayContents(myDataList,add);
+	//printArray(myDataList,length);
+	returnvalue = arrayContainsValue(myDataList,search);
+  cout << "Your value is located at index " << returnvalue << endl;
+
+}
+
+void printArray(int dataList [], int length){	// function signature
+	for (int i=0; i < length; i++){
+	cout << dataList[i] << endl;
+     }
+}
+void addToArrayContents(int dataList [], int add){  // function signature
+	for (int i=0; i < 11; i++){
+	dataList[i] = dataList[i]+add;
+     }
+}
+
+int arrayContainsValue(int dataList [], int search){ // function signature
+	for (int i=0; i < 11; i++){
+	  if (dataList[i] == search){
+		return i;}
+	}
+		return -1;
+	}
+		
+     
+
+
+
+
+
